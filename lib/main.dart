@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas2/routes/route_pages.dart';
 import 'pages/cat_list_page.dart';
 
 void main() {
@@ -12,8 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+
+      ),
       debugShowCheckedModeBanner: false,
-      home: CatListPage(),
+      onGenerateRoute: RoutePages.generateRoute,
+      home: const CatListPage(),
     );
   }
 }
